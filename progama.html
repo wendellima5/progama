@@ -1,0 +1,63 @@
+<scrip>
+    <script>
+
+        function iniciarJogo(){
+        const numeroaleatorio = Math.floor (Math.random () * 100 ) + 1;
+        let tentativas = 0;
+         
+        function advinharNumero() {
+            const palpite = parseInt(prompt("Digite seu palpite (entre 1 a 100:)"));
+            if (isNaN(palpite)) {
+                alert ("Por favor, insira um número válido.");
+                return;
+            }
+        
+            numeroTentativas++; 
+        
+            if (palpite === numeroAleatorio){
+                alert('Parabéns! Você acertou o número em ${numeroTentativas} tentativas.');
+                const jogarNovamente = confirm("Deseja jogar novamente?");
+                if (jogarNovamente){
+                    iniciarJogo();
+                }
+            }else if (palpite > numeroAleatorio){
+                alert("Muito alto! Tente um número menor.");
+                adivinharNumero();
+            }else{
+                alert("Muito baixo! Tente um número maior.");
+                adivinharNumero();
+            }
+        }
+        
+        }
+        adivinharNumero();
+        
+        </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</scrip>
